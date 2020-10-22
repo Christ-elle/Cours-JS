@@ -1,0 +1,51 @@
+/* Les styles du repo des cours et des exos JS-Christelle-Colombbus  */
+body {
+    background-color: lightblue;
+    background-image: url(../img/logo.png);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1 {
+    border: rgb(13, 13, 170) 1px solid;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(13, 13, 170);
+    
+ 
+}
+#wrapper {
+    background-color: rgb(214, 235, 241);
+    width: 80%;
+    padding: 15px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#b1, #b2 {
+    text-align: center;
+    border: rgb(13, 13, 170) 1px solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    
+  
+}
+code {
+    color: rgb(9, 190, 9);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* pour surligner les textes en jaune  */
+.stabilo {
+    background-color: yellow;
+}
+h2 {
+    border: rgb(13, 13, 170) 1px solid;
+    border-radius: 5px;
+    color: rgb(13, 13, 170);
+    margin-top: 80px;
+   
+}
+p {
+    font-family: cursive;
+    margin-top: 50px;
+   
+}
+/* Les titres  */

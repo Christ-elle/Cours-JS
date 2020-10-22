@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS- I 04 introduction</title>
+    <!-- Mes styles  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- script JS en externe: c'est la méthode recommandée, on indique la source, le fichier en externe -->
+
+    <script src="introduction.js" async></script>
+    
+    
+</head>
+<body>
+    <div id=wrapper>
+        <h1>JS- I 04 introduction</h1>
+
+        <button id="b1">Cliquez sur moi</button>
+        <button id="b2">Ajouter un paragraphe</button>
+
+        <h2>La place du code et l'ordre d'execution</h2>
+
+        <p>L'ordre d'execution du code par le navigateur</p>
+        <p>Par défaut, un navigateur va lire et exécuter le code dans l'ordre de son écriture.</p>
+        <p>Lorsque le navigateur arrive à un élément script, il va stopper le traitement du reste HTML jusqu'a ce que le code JavaScript soit chargé dans la page et exécuté.</p>
+        <p>résumons ce qu'il se passe dans ce cas.</p>
+        <ol>
+            <li>Le navigateur commence à analyser (ou à traiter) le code HTML.</li>
+            <li>Le navigateur rencontre un élément <code>script</code></li>
+            <li>Le contenu JS est demandé et téléchargé (si il est en externe) puis executé. Durant tout ce temps, l'analyseur du navigateur bloque l'affichage du HTML ce qui peut ralentir si le sript est long, l'affichage de la page.</li>
+            <li>Dès que le JS à été executé, le contenu HTML est affiché.</li>
+        </ol>
+        <p>Ce souci d'attente est résolu grâce au téléchargement "asynchrone" des données avec l'attribut <code>async</code>ou <code>defer</code> dans le cas où l'ont fait appel à des fichiers externes.</p>
+
+        <h2>Le point virgule</h2>
+        <p>le point virgule <code>;</code> est utilisé pour signifié la fin d'une instruction ( une variable, une condition, une boucle etc...).</p>
+    </div>
+    
+</body>
+</html>
