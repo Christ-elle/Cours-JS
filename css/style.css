@@ -1,51 +1,100 @@
 /* Les styles du repo des cours et des exos JS-Christelle-Colombbus  */
 body {
-    background-color: lightblue;
-    background-image: url(../img/logo.png);
+    background-color: rgb(233, 232, 232);
+    /* background-image: url(../img/logo.png); */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 h1 {
-    border: rgb(13, 13, 170) 1px solid;
+    border: grey 2px solid;
     text-align: center;
-    border-radius: 5px;
-    color: rgb(13, 13, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    box-shadow: rgba(184, 176, 176, 0.712) 3px 3px;
+    margin: 0 auto;
+    color: grey;
+    width: 800px;
+    margin-left: 400px;
     
- 
+    
+}
+hr {
+    width: 800px;
+    margin-left: 400px;
 }
 #wrapper {
-    background-color: rgb(214, 235, 241);
-    width: 80%;
+    background-color: rgb(221, 210, 210);
+    width: 800px;
     padding: 15px;
     margin: 0 auto;
     padding: 20px;
+    
 }
+
 #b1, #b2 {
     text-align: center;
-    border: rgb(13, 13, 170) 1px solid;
-    border-radius: 5px;
-    margin: 0 auto;
+    border: grey 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    box-shadow: rgba(184, 176, 176, 0.712) 3px 3px;
     
   
 }
 code {
-    color: rgb(9, 190, 9);
+    color: rgb(199, 11, 11);
     text-transform: uppercase;
     font-weight: bold;
 }
-/* pour surligner les textes en jaune  */
+/* pour surligner les textes en rose */
 .stabilo {
-    background-color: yellow;
+    background-color: pink;
 }
 h2 {
-    border: rgb(13, 13, 170) 1px solid;
-    border-radius: 5px;
-    color: rgb(13, 13, 170);
+    border: grey 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 10px;
+    color: grey;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    box-shadow: rgba(184, 176, 176, 0.712) 3px 3px;
     margin-top: 80px;
    
 }
 p {
     font-family: cursive;
     margin-top: 50px;
+    margin-left: 20px;
    
 }
-/* Les titres  */
+li {
+    color: grey;
+   
+}
+h3 {
+    color: grey;
+    margin-left: 20px;
+}
+dt {
+    margin-left: 20px;
+}
+dd {
+    margin-left: 70px;
+}
+/* tableau  */
+table {
+    border: grey 3px solid;
+    border-radius: 5px;
+    box-shadow: rgba(184, 176, 176, 0.712) 2px 2px;
+    border-collapse: collapse; 
+    width: 600px;
+    margin-left: 70px;
+    
+}
+thead {
+    border-spacing: 50px; 
+    text-align: center;
+}
+tr {
+    border: grey 2px solid; 
+    width: 600px;
+} 

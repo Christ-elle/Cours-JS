@@ -19,12 +19,12 @@ monAge= 40;
 console.log(prenom);
 console.log(monAge);
 
-prenom ='Justine'
+prenom ='Justine';
 monAge = 25;
 
 console.log(monAge);
 //  Par exemple, ceci fonctionne 
-nom = 'Isola'
+nom = 'Isola';
 var nom;
 console.log(nom);
 
@@ -33,5 +33,19 @@ console.log(nom);
 // let ville;
 
 let ville;
-ville ='Suresnes'
+ville ='Suresnes';
 console.log(ville);
+
+// // Avec prompt on as une fenêtre avec un champ de saisie 
+// prompt();
+// Redéclaration des variables 
+// ceci fonctionne
+
+var chien = 'médor';
+var chien ='max';
+
+console.log(chien);
+
+// ceci ne fonctionnera pas 
+// let chat = 'minou';
+// let chat = 'obi-wan';
