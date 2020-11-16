@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c194d650bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/entrainement.ico" type="image/x-icon">
+    <title>Rectangle</title>
+    <style>
+        .number {
+            color: #86de74;
+        }        
+        details {
+            background-color: #423C0B;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            color: #fff;
+        }
+        details .fa-info-circle {
+            color: #8383ff ;
+        }
+        details .fa-graduation-cap {
+                color: #C0C000;
+          }
+          ul li {
+                margin-bottom: 0.125rem;
+          }
+        /* le vert à utiliser pour les nombres : #86DE74
+          les balises details : #423C0B
+          icône info : #8383FF
+          icône peda : #C0C000 */
+  </style>
+
+</head>
+<body>
+    <header class="entete">
+        <a class="entete-gauche" href="../../index.html">
+            <img src="../../images/logo-ex.svg" alt="logo js">
+        </a>
+        <a class="entete-milieu" href="https://colombbus.org">
+            <h1>Colombbus</h1>
+            <img class="logo-colombbus" src="../../images/logo-colombbus.svg" alt="logo colombbus">
+        </a>
+        <a class="entete-droite" href="https://10mentionweb.org">
+            <img src="../../images/logo-10mw.svg" alt="logo 10mentionWeb">
+        </a>
+    </header>
+    <main>
+        <h2>Rectangle : calculer périmètre / aire d'un rectangle</h2>
+        <h3>Objectifs</h3>
+        <p>
+            Ecrire un script qui affichera dans la console les valeurs choisies pour la largeur et la longueur d'un
+            rectange puis le périmètre et l'aire d'un rectangle
+        </p>
+        <h3>A faire</h3>
+        <ul>
+            <li>Créer un script <code>js/entrainement/01-rectangle.js</code> </li>
+            <li>La largeur sera stockée dans une variable <code>largeur</code>; idem pour la longueur</li>
+            <li>Le script affichera dans la console :
+                <ul>
+                    <li>
+                        <code>Paramètres du rectangle : longueur <span class="number">7</span>, 
+                        largeur <span class="number">9</span></code>
+                    </li>
+                    <li><code>L'aire du rectangle est <span class="number">63</span></code></li>
+                    <li><code>Le périmètre du rectangle est : <span class="number">32</span></code></li>
+                    <li>Ajouter un lien vers le script <a href="../../js/entrainement/01-rectangle.js">fini</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Pour aller plus loin</h3>
+        <ul>
+            <li>Chercher comment utiliser une formule avec une multiplication pour le périmètre</li>
+        </ul>
+        <details class="aide">
+            <!-- 'détails' va permettre de faire une zone ou l'on va pouvoir utiliser les balises.  
+            Cette balise fonctionne avec la balise ' summary' qui va être le titre de 'détails'-->
+            <summary><i class="fas fa-info-circle"></i> Aide</summary>
+            <ul>
+                <li>Créer les variables en utilisant <code>let bob</code></li>
+                <li>Assigner immédiatement leur valeur choisie au hasard avec le signe <code>=</code></li>
+                <li>Pour conserver les types des éléments affichés dans la console, utiliser <code>console.log()</code>
+                    avec plusieurs paramètres, donc séparés par des virgules
+                </li>
+            </ul>
+        </details>
+        <details class="pedagogie">
+            <summary><i class="fas fa-graduation-cap"></i> Notions à acquérir</summary>
+            <ul>
+                <li>Créer de script dans un fichier séparé</li>
+                <li>Différences entre <code>&lt;script&gt;</code> et un fichier séparé</li>
+                <li>Création de variable type <code>number</code>
+                <li>Différences type <code>number</code> et le type <code>string</code></li>
+                <li>Assigner une valeur à une variable</li>
+                <li>Afficher le contenu d'une variable</li>
+                <li>Afficher plusieurs paramètres</li>
+                <li>Conserver le type de plusieurs paramètres</li>
+            </ul>
+        </details>
+    </main>
+    <script src="../../js/entrainement/01-rectangle.js"></script>
+</body>
+</html>

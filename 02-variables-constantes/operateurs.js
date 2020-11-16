@@ -54,3 +54,25 @@ console.log(l);
      '\nb contient :' + j +
      '\nb contient :' + l 
 );
+
+// Opérateurs d'affectation dans le JS 
+
+let chiffre1 = 501;
+let chiffre2 = 18;
+// let prenom ="Audrey";
+let somme = chiffre1+ chiffre2;
+
+console.log(chiffre1);
+// console.log(prenom);
+// console.log(typeof chiffre1);
+console.log(somme);
+
+let m = 20;
+let o = 50;
+
+m += 15; // on ajoute 15 à la valeur stockée
+
+o *= 5;
+
+console.log(o);
+

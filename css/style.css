@@ -1,25 +1,60 @@
 /* Les styles du repo des cours et des exos JS-Christelle-Colombbus  */
 body {
-    background-color: rgb(233, 232, 232);
-    /* background-image: url(../img/logo.png); */
+    background-color: rgb(219, 217, 217);
     font-family: Georgia, 'Times New Roman', Times, serif;
+   
 }
 h1 {
     border: grey 2px solid;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-    box-shadow: rgba(184, 176, 176, 0.712) 3px 3px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
     margin: 0 auto;
     color: grey;
     width: 800px;
-    margin-left: 400px;
+    margin-left: 50pxpx;
     
     
 }
-hr {
+#menu {
     width: 800px;
-    margin-left: 400px;
+    height: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    display: flex;
+    border: grey 2px solid;
+    border-radius: 10px;
+    background-color: rgb(221, 210, 210);
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    margin-left: 320px;
+    text-align: center;
+}
+.sous-menu {
+    display: none;
+    background-color: rgb(221, 210, 210);
+    border-radius: 50%;
+    border: gray 1px solid;
+    Position : absolute;
+    Z-index : 1000;
+
+    
+}
+nav ul li:hover .sous-menu {
+    display: block;
+}
+.sous-menu li a {
+    text-decoration: none;
+    color: black;
+}
+ul { 
+    width: 300px;
+}
+hr {
+    width: 600px;
+    margin: 5px auto;
+
 }
 #wrapper {
     background-color: rgb(221, 210, 210);
@@ -27,7 +62,7 @@ hr {
     padding: 15px;
     margin: 0 auto;
     padding: 20px;
-    
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
 }
 
 #b1, #b2 {
@@ -35,7 +70,7 @@ hr {
     border: grey 2px solid;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
-    box-shadow: rgba(184, 176, 176, 0.712) 3px 3px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
     
   
 }
@@ -51,14 +86,24 @@ code {
 h2 {
     border: grey 2px solid;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 10px;
+    font-weight: 100;
     color: grey;
     border-radius: 10px;
     width: 600px;
     text-align: center;
-    box-shadow: rgba(184, 176, 176, 0.712) 3px 3px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
     margin-top: 80px;
    
+}
+h3 {
+    border: grey 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
+    margin-top: 80px;
 }
 p {
     font-family: cursive;
@@ -84,10 +129,11 @@ dd {
 table {
     border: grey 3px solid;
     border-radius: 5px;
-    box-shadow: rgba(184, 176, 176, 0.712) 2px 2px;
+    box-shadow: rgba(184, 176, 176, 0.712) 4px 4px;
     border-collapse: collapse; 
     width: 600px;
     margin-left: 70px;
+
     
 }
 thead {
@@ -98,3 +144,10 @@ tr {
     border: grey 2px solid; 
     width: 600px;
 } 
+tr:nth-of-type(even){
+    background: grey;
+    color: ivory;
+}
+td {
+    border: grey 2px solid;
+}
