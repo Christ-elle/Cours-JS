@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src="selecteur.js"></script> -->
+  </head>
+  
+  <body>
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS- VI 01 -Sélécteur</h1>
+            <p class="lead">Les sélécteurs en JS</p>
+            
+        </div>
+            <div class="container-fluid">
+                <div class="row border border-succes">
+                    <h2 id="titreNiveau2">1-Ce titre (# titreNiveau2) sera séléctionné dans la console</h2>
+                </div>
+                <div class="col-12">
+                    <p class="ma-classe">hello</p>
+                    <p class= "ma-classe">Dans la console nous voyons les différentes méthodes de sélections cet élément dont l'id est <code>titreNiveau1</code></p>
+                    <ol>
+                        <li>Dans une variable qui se trouve dans <code>window.onLoad()</code>// <code>var select1 = titreNiveau1</code></li>
+                        <li>Dans une variable simple <code>var select2 = titreNiveau1;</code></li>
+                        <li>Avec getElementById directement dans le document <code>document.getElementById('titreNiveau1');</code></li>
+                        <li>Avec getElementByClassName je récupère un ensemble une collection de class <code>getElementsByClassName('maClasse1');</code></li>
+                        <li>Avec getElementByTagName je récupère un ensemble d'élément par leur nom</li>
+                    </ol>
+                </div> 
+                <!-- fin de div class col-12  -->
+                <div class="col-4 bg-success text-white">Paragraphe</div>
+                <div class="col-4">Paragraphe</div>
+                <div class="col-4 bg-primary text-white">Paragraphe</div>
+            </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <scrip src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></scrip>
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></scrip>
+    <scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></scrip>
+
+    <!-- Mes scripts  -->
+    <script>
+
+        // pour vérifié que les pages html et js soient unies faire une alerte
+        // alert('coucou');
+
+        //2nde méthode pour séléctionner un élément
+
+        // var select2 = titreNiveau1;
+        // console.log(select2);
+        // methode désuette, on peut la retrouvée mais elle ne se pratique plus
+        // séléction naturelle
+
+        // 3 eme méthode getElementById directement par son identifiant avec un selecteur
+
+        var select3 = document.getElementById('titreNiveau1');
+        console.log(select3);
+
+        // 4 eme méthode pour selectionner un élément : getElementsByClassName
+        // Je cherche tous les éléments qui ont cette classe.
+        // Pour exemple c'est comme si on pouvait faire des recherches dans un index.
+
+        var selectClass = document.getElementsByClassName('row');
+        console.log(selectClass);
+
+        var selectClass = document.getElementsByClassName('ma-classe');
+        console.log(selectClass);
+
+        //Grâce à l'intex des éléments qui ont la class .ma-classe je peux en cibler un en particulier, comme pour faire une recherche d'un sous titre et la page ou il s'y trouve par exemple.
+        
+        console.log(selectClass[1]);
+
+        //.innerHTML cible ce qu ise trouve dans l'élément, on dit qu'il défini le contenu
+        selectClass[1].innerHTML;
+        console.log(selectClass[1].innerHTML);
+
+        selectClass[1].innerHTML = 'Et là je change le contenu';
+
+        // mini exo : Modifier le contenu du h1 id #aChanger et changer par "3- Je change de titre"
+
+         document.getElementById('titreNiveau2').innerHTML = '3- Je change de titre';
+        
+        // Correction Patrick
+        
+        //  var select4 = document.getElementById('aChanger');
+        //  console.log(select4);
+        //  select4.innerHTML = '3- Je change de titre';
+
+    </script>
+  </body>
+</html>
+>
