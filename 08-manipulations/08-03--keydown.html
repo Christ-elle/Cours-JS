@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>JS 08- 03 keydown</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src="keydown.js"></script> -->
+  <style>
+    #move {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border: 2px solid red;
+      line-height: 100px;
+      text-align: center;
+      position: relative;
+    }
+
+
+  </style>
+    
+
+  </head>
+  
+  <body>
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS- VIII - 03 Jeu avec  keydown</h1>
+            <p class="lead"> 1- keydown</p>
+            
+        </div>
+        <!-- Fin de jumbotron  -->
+
+            <div class="container border border-primary p-4">
+              <div class="row border border-danger">
+                  <div class="col-6">
+                    <h2>1- keydown</h2>
+                    
+                </div>
+                <!-- fin div col-6  -->
+
+                <div class="col-6">
+                  <div id="move"></div>
+                  <!-- fin div id move  -->
+                </div>
+                <!-- fin div class col-6  -->
+              </div>
+                <!-- fin div class row  -->
+               
+              </div>
+            <!-- fin div container  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <scrip src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></scrip>
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></scrip>
+    <scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></scrip>
+
+
+
+    <!-- Mes scripts  -->
+    <script>
+        
+        // document.addEventListener('keydown', clavier);
+        document.onkeydown = clavier;
+            console.log(document.getElementById('move'));
+            function clavier(e) {
+                var carre = document.getElementById('move')
+                if (e.keyCode == '38') {
+                    carre.style.top = (carre.offsetTop - 20) + 'px';
+                } else if (e.keyCode == '39') {
+                    carre.style.left = (carre.offsetLeft + 20) + 'px';
+                } else if (e.keyCode == '40') {
+                    carre.style.top = (carre.offsetTop + 20) + 'px';
+                } else if (e.keyCode == '37') {
+                    carre.style.left = (carre.offsetLeft - 20) + 'px';
+                }
+            }// fin fonction clavier
+
+    </script>
+  </body>
+</html>

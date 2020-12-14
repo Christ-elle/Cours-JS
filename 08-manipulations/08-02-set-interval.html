@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>JS 08- II SetInterval</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+
+
+        
+    </style>
+     <script src="set-interval.js"></script>
+
+ 
+    
+  </head>
+  
+  <body>
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS- VIII Diaporama avec setInterval()</h1>
+            <p class="lead">setInterval()</p>
+            
+        </div>
+        <!-- Fin de jumbotron  -->
+
+            <div class="container border border-primary p-4">
+              <div class="row border border-danger">
+                  <div class="col-6 bg-primary">
+                    <h2>1-</h2>
+                </div>
+                <!-- fin div col-6  -->
+
+                <div class="col-6">
+                    <div id="diaporama1" class="border border-danger">
+                        <img src="img/1.jpg" alt="La piscine" id="imgDiapo" class="img-fluid">
+                    </div>
+                    <!-- fin diaporama1  -->
+                </div>
+              </div>
+            </div>
+            <!-- fin div container  -->
+       
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <scrip src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></scrip>
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></scrip>
+    <scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></scrip>
+
+
+
+    <!-- Mes scripts  -->
+    <script>
+        // DIAPORAMA avec setInterval
+
+        let varImg = 0; // initialisation à 0 de la variable pour l'image
+        console.log( typeof varImg);
+
+        // let testGet = imgDiapo.gertAttribute('src');
+        //console.log(testGet);
+
+
+         let timer = window.setInterval('monDiaporama()', 3000); // initialisation de timer avec setInterval ('nomdelafonction' temps en millisecondes)
+
+        function monDiaporama() {
+          varImg +=1; // on affecte 1 et on incrémente en même temps
+          imgDiapo.setAttribute('src', 'img/' + varImg + '.jpg'); // je confère, je définis, je mets en place et j'appele les images par leurs nom automatiquement
+          console.log(' la varImg = ' + varImg); // pour voir le contenu de la variable
+          if(varImg == 5) {
+            clearInterval(timer); // clearInterval permet de stoper dès que la variable est égale à 5 ( nbre images ds le diaporama)
+          }
+        } // fin function
+        
+       
+
+    </script>
+  

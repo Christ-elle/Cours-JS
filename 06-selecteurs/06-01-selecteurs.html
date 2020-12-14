@@ -21,6 +21,8 @@
                     <h2 id="titreNiveau2">1-Ce titre (# titreNiveau2) sera séléctionné dans la console</h2>
                 </div>
                 <div class="col-12">
+                    <p class="selectClasse">youpi</p>
+                    <p class="selectClasse"> loulou</p>
                     <p class="ma-classe">hello</p>
                     <p class= "ma-classe">Dans la console nous voyons les différentes méthodes de sélections cet élément dont l'id est <code>titreNiveau1</code></p>
                     <ol>
@@ -32,9 +34,15 @@
                     </ol>
                 </div> 
                 <!-- fin de div class col-12  -->
-                <div class="col-4 bg-success text-white">Paragraphe</div>
+
+                <div class="col-4 bg-success text-white">
+                    <h2 id="aChanger">toto</h2>
+                    <p class='col-4'>Paragraphe</p>
+                </div>
                 <div class="col-4">Paragraphe</div>
-                <div class="col-4 bg-primary text-white">Paragraphe</div>
+                <div class="col-4 bg-primary text-white">
+                    <p>Paragraphe</p>
+                </div>
             </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -76,7 +84,7 @@
 
         //.innerHTML cible ce qu ise trouve dans l'élément, on dit qu'il défini le contenu
         selectClass[1].innerHTML;
-        console.log(selectClass[1].innerHTML);
+        console.log(selectClass[1].innerHTML); // Je vais le modifier
 
         selectClass[1].innerHTML = 'Et là je change le contenu';
 
@@ -86,9 +94,70 @@
         
         // Correction Patrick
         
-        //  var select4 = document.getElementById('aChanger');
-        //  console.log(select4);
-        //  select4.innerHTML = '3- Je change de titre';
+         var select4 = document.getElementById('aChanger');
+         console.log(select4);
+         select4.innerHTML = '3- Je change de titre';
+
+         // 3 eme methode
+         //Selection d'un élément par son nom getElementsByTagName
+
+         var lesP = document.getElementsByTagName('p'); // on trouve tous les paragragraphes de la page 
+         console.log(lesP);
+        //  console.log(lesP.length);
+
+        //Mini exo
+        //Selectionner le premier paragraphe
+        console.log(lesP[0]);
+
+        // modification du style d'un élément
+        lesP[0].style.backgroundColor = "pink"; // on change la couleur de fond
+        lesP[0].style.fontVariant = "small-caps"; // en petite capitales
+        lesP[0].style.borderRadius = "8px";
+        lesP[0].style.color = "white";
+
+        // Les mots clefs à appliquer avec . style
+
+        //https:www.w3schools.com/jsref/dom_obj_style.asp
+
+        //Si je veux maintenant changer le style de tous les p
+
+        for(var i=0; i < lesP.length; i++) {
+
+            //Chacun des p indice 
+            lesP[i].style.backgroundColor = "olive";
+            lesP[i].style.fontVariant = "small-caps";
+            lesP[i].style.fontSize = " 2em";
+        }
+
+        //6- eme méthode
+        // Avec querySelector
+
+        let query1 = document.querySelector('#titre2');
+        console.log(query1);
+
+        //all tous les éléments qui ont la class .uneClasse
+        let query2 = document.querySelectorAll('.uneClasse');
+        console.log(query2);
+
+        let query3 = document.querySelectorAll('p');
+        console.log(query3);
+
+        // Mini EXO
+        // A 4 ou 5  paragraphes mettez une classe.selectClasse
+        //Changez le texte pour " Je change le texte de ce paragraphe" passez  le en fond " lightblue" et texte blanc en gras
+
+        let query4 = document.querySelectorAll('p.selectClasse');
+        console.log(query4);
+        console.log(query4[1].innerHTML);
+
+        query4[1].innerHTML = 'Je change le texte de ce paragraphe';
+        lesP[1].style.backgroundColor = "lightblue";
+        lesP[1].style.color = "white";
+        lesP[1].style.fontWeight = "bold";
+
+        
+
+
 
     </script>
   </body>

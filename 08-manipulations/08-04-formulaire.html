@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>JS 08- 04 Formulaire</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src=".js"></script> -->
+  <style>
+   .error {
+     background-color: crimson;
+   }
+   .valide {
+     background-color: darkgreen;
+   }
+
+  </style>
+    
+
+  </head>
+  
+  <body>
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS- VIII - 04 Formulaire</h1>
+            <p class="lead">Un formulaire</p>
+            
+        </div>
+        <!-- Fin de jumbotron  -->
+
+            <div class="container border border-primary p-4">
+              <div class="row border border-danger">
+                  <div class="col-6">
+                    <h2>Fonction contrôleForm()</h2>
+                    
+                </div>
+                <!-- fin div col-6  -->
+
+                <div class="col-6">
+                  <form action="formulaire" method="GET" name="formulaire" class="form-inline">
+                    <div class="form-group m-1">
+                    <label for="pseudo" class="sr-only">Pseudo</label>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo">
+                    </div>
+                    <div class="form-group m-1">
+                    <label for="mdp" class="sr-only">Mot de passe</label>
+                    <input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe">
+                    </div>
+
+                    <button type="submit" id="submit" value="ok" class="btn btn-primary" onclick="controleForm()">Envoyer</button>
+                  </form>
+                 
+                </div>
+                <!-- fin div class col-6  -->
+              </div>
+                <!-- fin div class row  -->
+               <div class="row">
+                 <div class="col-3">
+                  <h2>Nouvelle fonction inscriptionForm2()</h2>
+                 </div>
+                 <!-- fin div col 3  -->
+                 <div class="col-9 border border-succes">
+                  <form action="inscription" method="GET" name="inscription" id="form_inscription">
+
+                    <div class="form-group">
+                        <label for="prenom">Prénom *</label>
+                        <input type="text" name="prenom" id="prenom" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Nom *</label>
+                        <input type="text" name="nom" id="nom" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="mdp">Choisissez un mot de passe *</label>
+                        <input type="password" name="mdp_2" id="mdp_2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="confmdp">Confirmez votre mot de passe *</label>
+                        <input type="password" name="confmdp" id="confmdp" class="form-control">
+                    </div>
+                    
+                    <button type="submit" id="submit_2" value="inscription" >Inscrivez-vous</button>
+                    <button type="reset" id="reset_form" class="btn btn-warning" >Effacer</button>
+                   
+                  </form>
+                 </div>
+                 <!-- fin col-9  -->
+               </div>
+              </div>
+            <!-- fin div container  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <scrip src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></scrip>
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></scrip>
+    <scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></scrip>
+
+
+
+    <!-- Mes scripts  -->
+    <script>
+        // Contrôle du formulaire 1 avec une fonction
+
+        function controleForm() {
+          //event veut dire evenement
+          event.preventDefault(); // pour empêcher l'envoi du formulaire dans le document, à retiré lorsque on monte un site
+          // dans le document, dans le formulaire > la longeur de la valeur dans pseudo
+          if(document.formulaire.pseudo.value.length > 5 || document.formulaire.pseudo.value.length > 15) {
+              console.log(document.formulaire.pseudo.value);
+              alert('Le pseudo doit comporter en 5 et 15 caractères');
+          }
+          if(document.formulaire.mdp.value.length < 3 || document.formulaire.mdp.value.length > 12) {
+            alert('Le mot de passe doit comporter entre 3 et 12 caractères');
+          }
+        }
+    // contrôle du formulaire d'inscription avec la fonction
+
+    
+        // Récutération du formulaire par son identifiant
+    let formInscrip = document.getElementById('form_inscription');
+    // console.log(btn);
+    // écoute de l'envoi du formulaire
+    formInscrip.addEventListener('submit', inscriptionForm);
+
+    // fonction pour traiter le formulaire
+    function inscriptionForm(event) {
+      // permet de ne pas envoyer le formulaire,  pour ne pas rafraîchir la page,permet de faire des test, il faut retiré cette ligne de code une fois que nous avons fini.
+      event.preventDefault(); //  e signifie  event , on met un e à la palve de event mais il faut l'écrire partout.
+      // console.log(event.target.prenom); //
+      
+      //http://regex101.com
+
+      let regex = /([a-z0-9](\.?|\_|\-))*@([a-z0-9]{2,})(\.[a-z]{2,}){1,}/;
+
+      // Récpération du contenu des champs
+      let prenom = event.target.prenom.value,
+          nom = event.target.nom.value,
+          mail = event.target.email.value,
+          mdp_2 = event.target.mdp_2.value,
+          confmdp = event.target.confmdp.value;
+
+      // console.log(prenom,nom,email,mdp_2,confmdp);
+
+      if(prenom !== '' || nom !== '') { // prenom et nom ne sont pas vide, l'utilisateur peut remplir ce champ
+          if(prenom.length < 2) {
+          //classList représente toute les classes de l'élément event.target
+          //add ajoute une class à un élément event.target
+            event.target.prenom.classList.add("error");
+            event.target.prenom.classList.remove("valide");
+        }else {
+          event.target.prenom.classList.add("valide");
+        }
+          if(nom.length < 4) {
+            event.target.nom.classList.add("error");
+            event.target.nom.classList.remove("valide");
+        }
+          else {
+            event.target.nom.classList.add("valide");
+            //sinon on valide
+        }
+      } // fin condition prenom / nom
+        
+        // Nouveau if, vérification et identification des 2 mots de passe 
+        if( confmdp!== mdp_2 ){ //si ils sont différents
+          event.target.mdp_2.classList.add("error");
+          event.target.mdp_2.classList.remove("valide");
+          event.target.confmdp.classList.add("error");
+          event.target.confmdp.classList.remove("valide");
+
+      } else if(mdp_2.length < 5 || mdp_2.length > 12){ // longeur du mdp entre 5 et 12 caractères
+          event.target.mdp_2.classList.add("error");
+          event.target.mdp_2.classList.remove("valide");
+
+      } else { // tout est bon
+          event.target.mdp_2.classList.add("valide");
+          event.target.mdp_2.classList.remove("valide");
+          event.target.confmdp.classList.add("valide");
+          event.target.confmdp.classList.remove("error");
+
+      }
+
+      // console.log(regex.test(email));
+      if(regex.text(email) === false){
+        event.target.email.classList.add("error");
+        event.target.email.classList.remove("valide");
+
+        } else {
+          event.target.email.classList.remove("error");
+          event.target.email.classList.add("valide");
+        }
+    } // fin fonction 
+
+    document.getElementById("reset_form").addEventListener("click", function (event){
+      console.log(event.target.form);
+      event.target.form.prenom.value = "";
+      event.target.form.nom.value = "";
+      event.target.form.email.value = "";
+      event.target.form.mdp_2.value = "";
+      event.target.form.confmdp.value = "";
+
+    });
+    </script>
+  </body>
+</html>
