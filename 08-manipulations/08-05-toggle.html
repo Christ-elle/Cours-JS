@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>JS 08- 05 Toggle</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <script src=".js"></script> -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <style>
+        /* class pour l'image  */
+        .cache {
+            display: none;
+        }
+
+    </style>
+ </head>
+  
+  <body>
+      <!-- NAV BAR début  -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cours JavaScript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lien</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lien désactivé</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="08-05-toggle.html">Toggle</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">08- Manipulation</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="08-01-diaporama.html">Diaporamas</a>
+                <a class="dropdown-item" href="08-02-set-interval.html">SetInterval()</a>
+                <a class="dropdown-item" href="08-03-keydown.html">Keydown</a>
+                <a class="dropdown-item" href="08-04-formulaire.html">Formulaires</a>
+                <a class="dropdown-item" href="08-05-toggle.html">Toggle</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search">
+          </form>
+        </div>
+      </nav>
+      <!-- NAV BAR fin  -->
+        <div class="jumbotron">
+            <h1 id="titreNiveau1" class="display-4">JS- VIII - 05 Toggle</h1>
+            <p class="lead">...</p>
+            
+        </div>
+        <!-- Fin de jumbotron  -->
+
+            <div class="container border border-primary p-4">
+              <div class="row justify-content-center m-2 p-2">
+                  <div class="col-6 text-center">
+                    <button type="button" class="btn btn-block btn-outline-primary" id="cacheImage">Afficher/Cacher l'image</button>
+                    
+                </div>
+                <!-- fin div col-6  -->
+
+                <div class="col-6">
+                <p></p>
+                 
+                </div>
+                <!-- fin div class col-6  -->
+                <div class="row">
+                    <div class="col-12">
+                        <img src="img/paris-1225923_1280.jpg" alt="Paris" class="img-fluid cache">
+
+                    </div>
+
+                </div>
+              </div>
+                <!-- fin div class row  -->
+               
+                 <!-- fin col-9  -->
+              
+            <!-- fin div container  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    <!-- Mes scripts  -->
+    <script>
+        
+        let bouton = document.getElementById('cacheImage');
+          console.log(bouton);
+        //Autre façon de faire pour le bouton
+
+        // let bouton2 = document.querySelector('#cacheImage');
+        // console.log(bouton2);
+
+        let photo = document.querySelector('.cache');
+        console.log(photo);
+
+        // Autre façon de faire pour l'image
+
+        // let photo2 = document.querySelector('.cache');
+        // console.log(photo); 
+
+        function cliqueBouton() {
+            photo.classList.toggle('cache');
+        }
+        bouton.addEventListener('click', cliqueBouton);
+
+        // Comment se servir de toggle dans un autre code 
+
+        // if (prenom.length < 2) {
+        //             // classList représente toutes les classes de l'élément e.target
+        //             // add ajoute une classe
+        //             e.target.prenom.classList.add("error");
+        //             // remove pour supprimer
+        //             e.target.prenom.classList.remove("valide");
+        //         } else {
+        //             // toggle va eviter d'écrire les deux lignes pour error et valide
+        //             e.target.prenom.classList.toggle("valide", "error");
+        //             // e.target.prenom.classList.remove("error");
+        //             // // remove pour supprimer
+        //             // e.target.prenom.classList.add("valide");
+        //         }
+
+
+
+
+
+      
+    </script>
+  </body>
+</html>
